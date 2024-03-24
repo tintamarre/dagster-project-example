@@ -15,7 +15,7 @@ services:
     ports:
       - 5432:5432
     environment:
-      - POSTGRES_PASSWORD=gaster
+      - POSTGRES_PASSWORD={POSTGRES_PASSWORD}
     volumes:
       - dagster-postgres:/var/lib/postgresql/data
 volumes:
