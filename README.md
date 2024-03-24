@@ -1,14 +1,16 @@
 # Dagster Project Example
 
+## Project Structure Example
+
 This is an example on how to structure a [Dagster] project in order to organize
 the assets, jobs, repositories, schedules, and ops. The example also contains
 examples on unit-tests and a docker-compose deployment file that utilizes a
-Postgresql database for the run, event_log and schedule storage.
+PostgreSQL database for the run, event_log, and schedule storage.
 
 This example should in no way be considered suitable for production and is
-marely my own example of a possible file structure. I personally felt that it
-was difficult to put the Dagster concepts to use since the projects own examples
-had widely different structure and was difficult to overview as a beginner.
+merely my own example of a possible file structure. I personally felt that it
+was difficult to put the Dagster concepts to use since the project's own examples
+had widely different structure and were difficult to overview as a beginner.
 
 The example is based on the official [tutorial].
 
@@ -61,7 +63,7 @@ python -m dagster_example
 - [sspaeti-com/practical-data-engineering]
 
 [Dagster]: https://dagster.io/
-[tutorial]:https://docs.dagster.io/tutorial
+[tutorial]: https://docs.dagster.io/tutorial
 [pybokeh/dagster-sklearn]: https://github.com/pybokeh/dagster-sklearn
 [dagster-io/dagster examples]: https://github.com/dagster-io/dagster
 [xyzy-web/dagster-exchangerates]: https://github.com/xyzy-web/dagster-exchangerates
