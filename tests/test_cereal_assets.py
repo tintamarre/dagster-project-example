@@ -1,6 +1,6 @@
 """Example of how to unit-test Dagster assets."""
 
-from dagster_example.assets.cereal import (
+from dagster_home.assets.cereal import (
     CEREAL_URL,
     cereals,
     highest_calorie_cereal,
