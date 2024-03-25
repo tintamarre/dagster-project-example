@@ -3,8 +3,8 @@ run_storage:
   class: PostgresRunStorage
   config:
     postgres_db:
-      username: postgres
-      password: secret
+      username: dagster
+      password: dagster
       hostname: dagster-postgres
       db_name: postgres
       port: 5432
@@ -13,8 +13,8 @@ event_log_storage:
   class: PostgresEventLogStorage
   config:
     postgres_db:
-      username: postgres
-      password: secret
+      username: dagster
+      password: dagster
       hostname: dagster-postgres
       db_name: postgres
       port: 5432
@@ -23,8 +23,8 @@ schedule_storage:
   class: PostgresScheduleStorage
   config:
     postgres_db:
-      username: postgres
-      password: secret
+      username: dagster
+      password: dagster
       hostname: dagster-postgres
       db_name: postgres
       port: 5432
