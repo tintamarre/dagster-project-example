@@ -1,15 +1,20 @@
 FROM python:3.10-slim
 
 # Change working directory
-WORKDIR /usr/src/app
-ENV DAGSTER_HOME=/usr/src/app
+WORKDIR /opt/dagster/dagster_home
+ENV DAGSTER_HOME=/opt/dagster/dagster_home
 
 # Install dependencies
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+COPY ./requirements.txt /tmp/requirements.txt
+RUN pip install -r /tmp/requirements.txt
 
 # Copy source code
 COPY docker/dagster.yaml workspace.yaml .
 COPY dagster_example ./dagster_example
 
+EXPOSE 3000
+
 CMD ["dagster-webserver", "-w", "workspace.yaml", "-h", "0.0.0.0", "-p", "3000"]
+
+
+
