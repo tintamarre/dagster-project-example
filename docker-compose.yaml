@@ -39,13 +39,25 @@ services:
       - dagster-postgres:/var/lib/postgresql/data
     networks:
       - internal-dagster
+
+  caddy:
+    image: caddy:latest
+    restart: unless-stopped
+    ports:
+      - "3003:88"
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+
+    networks:
+      - web
+      - internal-dagster
 volumes:
   dagster-postgres:
     driver: local
 
 networks:
-  # web:
-  #   external: true
+  web:
+    external: true
   internal-dagster:
     external: false
     driver: bridge
