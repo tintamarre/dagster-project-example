@@ -8,10 +8,6 @@ ENV DAGSTER_HOME=/opt/dagster/dagster_home
 COPY ./requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 
-# Copy source code
-COPY docker/dagster.yaml workspace.yaml .
-COPY dagster_example ./dagster_example
-
 EXPOSE 3000
 
 CMD ["dagster-webserver", "-w", "workspace.yaml", "-h", "0.0.0.0", "-p", "3000"]
