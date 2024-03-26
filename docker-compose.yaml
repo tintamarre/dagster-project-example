@@ -3,8 +3,6 @@ services:
     build:
       context: .
       dockerfile: docker/Dockerfile
-    ports:
-      - 3000:3000
     restart: unless-stopped
     environment:
       - DOCKER_DEFAULT_PLATFORM=linux/amd64
