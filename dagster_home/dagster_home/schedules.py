@@ -9,7 +9,7 @@ from dagster_home.jobs import complex_job
 @schedule(
     cron_schedule="0 9 * * 1-5",
     job=complex_job,
-    execution_timezone="Europe/Stockholm",
+    execution_timezone="Europe/Brussels",
 )
 def every_weekday_9am(context):
     """Example of how to setup a weekday schedule for a job."""

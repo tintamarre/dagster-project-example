@@ -33,6 +33,21 @@ run_coordinator:
   class: QueuedRunCoordinator
   config:
     max_concurrent_runs: 5
+
+# alternatively, `base_dir` can be set to an environment variable
+local_artifact_storage:
+  module: dagster.core.storage.root
+  class: LocalArtifactStorage
+  config:
+    base_dir: "./.data/"
+
+# Alternatively, you could set the `base_dir` key to an environment variable
+compute_logs:
+  module: dagster.core.storage.local_compute_log_manager
+  class: LocalComputeLogManager
+  config:
+    base_dir: "./.data/logs/"
+
 telemetry:
   enabled: false
 nux:
